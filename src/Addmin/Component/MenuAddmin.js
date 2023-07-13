@@ -24,59 +24,49 @@ import { useNavigate } from "react-router-dom";
 const drawerWidth = 180;
 
 export default function MenuAddmin() {
-
-  let navigate_profileaddminpage = useNavigate(); 
-  const routeChange_profileaddminpage = () =>{ 
-    let path_profileaddminpage = `/profileaddminpage`; 
+  let navigate_profileaddminpage = useNavigate();
+  const routeChange_profileaddminpage = () => {
+    let path_profileaddminpage = `/profileaddminpage`;
     navigate_profileaddminpage(path_profileaddminpage);
-  }
+  };
 
-  let navigate_editemppage = useNavigate(); 
-  const routeChange_editemppage = () =>{ 
-    let path_editemppage = `/editemppage`; 
+  let navigate_editemppage = useNavigate();
+  const routeChange_editemppage = () => {
+    let path_editemppage = `/editemppage`;
     navigate_editemppage(path_editemppage);
-  }
-  let navigate_editmenupage = useNavigate(); 
-  const routeChange_editmenupage = () =>{ 
-    let path_editmenupage = `/editmenupage`; 
+  };
+  let navigate_editmenupage = useNavigate();
+  const routeChange_editmenupage = () => {
+    let path_editmenupage = `/editmenupage`;
     navigate_editmenupage(path_editmenupage);
-  }
+  };
 
-  let navigate_statpage = useNavigate(); 
-  const routeChange_statpage = () =>{ 
-    let path_statpage = `/statpage`; 
+  let navigate_statpage = useNavigate();
+  const routeChange_statpage = () => {
+    let path_statpage = `/statpage`;
     navigate_statpage(path_statpage);
-  }
-
-
+  };
 
   const handleClick = (menuLabel) => {
     console.log(`คลิกปุ่มเมนู ${menuLabel}!`);
-
-    if (menuLabel === 'ข้อมูลส่วนตัว') {
-      routeChange_profileaddminpage();
-    } else if (menuLabel === 'แก้ไขข้อมูลพนักงาน') {
+   
+    if (menuLabel === "แก้ไขข้อมูลพนักงาน") {
       routeChange_editemppage();
-    } else if (menuLabel === 'แก้ไขเมนูอาหาร') {
+    } else if (menuLabel === "แก้ไขเมนูอาหาร") {
       routeChange_editmenupage();
-    } else if (menuLabel === 'ยอดขาย') {
+    } else if (menuLabel === "ยอดขาย") {
       routeChange_statpage();
     } else {
-      // โค้ดสำหรับเมนูอื่นๆ (ถ้ามี)
+     
     }
   };
 
-
- 
-
   return (
     <Box>
-     
       <CssBaseline />
 
       <Drawer
         variant="permanent"
-        
         sx={{
           width: drawerWidth,
           flexShrink: 0,
@@ -84,30 +74,29 @@ export default function MenuAddmin() {
             width: drawerWidth,
             boxSizing: "border-box",
           },
-          
         }}
       >
         <Toolbar />
-        <Box sx={{ overflow: "auto" ,background: "#ffffff" }}
-        >
+        <Box sx={{ overflow: "auto", background: "#f7f7f7" }}>
           <List>
             {[
-              "ข้อมูลส่วนตัว",
               "แก้ไขข้อมูลพนักงาน",
               "แก้ไขเมนูอาหาร",
               "ยอดขาย",
             ].map((text, index) => (
-              <ListItem key={text} disablePadding >
-                <ListItemButton sx={{ height: 143 ,border: "1px solid #00D923" }} onClick={() => handleClick(text)} >
-                  <ListItemIcon >
+              <ListItem key={text} disablePadding>
+                <ListItemButton
+                  sx={{ height: 143, border: "0.1px solid #ffffff" }}
+                  onClick={() => handleClick(text)}
+                >
+                  <ListItemIcon>
                     {index % 4 === 0 ? (
-                      <AccountCircleIcon />
-                    ) : index % 4 === 1 ? (
+                      
                       <ManageAccountsIcon />
                     ) : index % 4 === 2 ? (
                       <RestaurantMenuIcon />
                     ) : (
-                      <LeaderboardIcon  />
+                      <LeaderboardIcon />
                     )}
                   </ListItemIcon>
                   <ListItemText
@@ -116,8 +105,6 @@ export default function MenuAddmin() {
                         sx={{
                           fontFamily: "Prompt",
                           fontSize: "15px",
-                          
-                          
                         }}
                       >
                         {text}

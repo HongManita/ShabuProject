@@ -18,7 +18,7 @@ import { getFormLabelUtilityClasses } from "@mui/material";
 export default function firstpage() {
   return (
     <div
-    style={{ backgroundColor: '#edfff0', height: '100vh', width: '100vw'}}>
+    style={{ backgroundColor: '#fdffff', height: '100vh', width: '100vw'}}>
   
 
       <img

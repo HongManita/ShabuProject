@@ -24,7 +24,7 @@ export default function Editemppage() {
       <HeaderAddmin />
       <Box
         sx={{
-          bgcolor: "#edfff0",
+          bgcolor: "#fdffff",
           width: "100%",
           height: "100%",
         }}

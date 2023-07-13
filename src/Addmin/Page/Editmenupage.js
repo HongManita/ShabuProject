@@ -23,7 +23,7 @@ export default function Editmenupage() {
       <HeaderAddmin />
       <Box
       sx={{
-        bgcolor: "#edfff0",
+        bgcolor: "#fdffff",
         width: "100vw",
         height: "100vh",
       }}

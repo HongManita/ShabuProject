@@ -24,7 +24,7 @@ export default function Homepage() {
   return (
     <Box sx={{
       display: "flex",flexDirection: "column",
-      backgroundColor:"#edfff0",
+      backgroundColor:"#fdffff",
       height: '100vh',
         width: '100vw',
     }}>
